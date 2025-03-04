@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagigation</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="nav">
+            <div class="navbar flex justify-between items-center p-5 sm:hidden">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <!--Modal for Mobile NavBar-->
+            <div class="hidden fixed top-0 left-0 w-full h-full bg-white bg-opacity-50 z-50" id="nav">
+                <div class="flex justify-end p-5">
+                    <i class="fas fa-times" id="close_button"></i>
+                </div>
+                <div class="flex flex-col justify-center items-center h-full">
+                    <select name="version" id="version" class="mb-4">
+                        <option value="10">About Windows</option>
+                    </select>
+                    <select name="version" id="version" class="mb-4">
+                        <option value="10">Get Windows</option>
+                    </select>
+                    <select name="version" id="version" class="mb-4">
+                        <option value="10">Shop PC's</option>
+                    </select>
+                    <select name="version" id="version" class="mb-4">
+                        <option value="10">Get Help</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navbar justify-evenly items-center hidden p-5 sm:flex">
+                <div class="flex justify-between items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="h-6">
+                </div>
+                <select name="version" id="version" class="ml-4">
+                    <option value="10">About Windows</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Get Windows</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Shop PC's</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Get Help</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const nav = document.getElementById('nav');
+    const navbar = document.querySelector('.navbar');
+    const bars = document.querySelector('.fa-bars');
+    const search = document.querySelector('.fa-search');
+
+    bars.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+    });
+
+    search.addEventListener('click', () => {
+        alert('Search');
+    });
+
+    const close_button = document.getElementById('close_button');
+    close_button.addEventListener('click', () => {
+        nav.classList.add('hidden');
+    });
+</script>
+</html>

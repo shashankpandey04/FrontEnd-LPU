@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<script>
+    function handleLogin(){
+        window.location.href = "https://www.instagram.com";
+    }
+    function handleSignUp(){
+        window.location.href = "https://www.instagram.com/accounts/emailsignup";
+    }
+    function handleForgotPassword(){
+        window.location.href = "https://www.instagram.com/accounts/password/reset/";
+    }
+    function handleFBLogin(){
+        window.location.href = "https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DATCWb4F-b2whxfZ-jUPpD2BAR-cOY92tkA75fQ2Kx9PTJM1R_8iTC1klXn6eHNhTuTT6thKHv2h3w_croghkv37GL3XaGBW8AAekSZ5llx2RUKvbj_zU6WiyAZ0zjlsa_yGlenLZjGBQfLMfubHhx7ju49oheZ6euiyGaPfLqEtC98DD9kehJi3CWzNDiZbktMVdeGrfHmrTsmGngFuV9BZZtbcv9WnWR2pVsH12Mn4UyJP36TLYHt0pIggJVyWk6-0W";
+    }
+</script>
+<body>
+    <div class="w-auto h-[100vh] bg-linear-to-bl from-violet-500 to-fuchsia-500">
+        <div class="flex justify-center items-center h-[100vh]">
+            <div class="w-[400px] h-[620px] bg-white rounded-xl p-4">
+                <div class="text-center text-4xl text-black p-4">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="text-center text-2xl text-black p-4">
+                    Login to Instagram
+                </div>
+                <div class="p-4">
+                    <input type="text" class="w-full p-2 rounded-xs border border-gray-300" placeholder="Phone number, username, or email">
+                </div>
+                <div class="p-4">
+                    <input type="password" class="w-full p-2 rounded-xs border border-gray-300" placeholder="Password">
+                </div>
+                <div class="p-4">
+                    <button class="w-full p-2 bg-blue-500 text-white rounded-xs" onclick="handleLogin()">Login</button>
+                </div>
+                <div class="p-4 text-center">
+                    <div class="flex justify-center items-center">
+                        <span class="w-1/3 h-0.5 bg-gray-400"></span>
+                        <p class="text-gray-400">OR</p>
+                        <span class="w-1/3 h-0.5 bg-gray-400"></span>
+                    </div>
+                </div>
+                <div class="text-center text-sky-700 p-4">
+                    <a target="_blank" href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DATCWb4F-b2whxfZ-jUPpD2BAR-cOY92tkA75fQ2Kx9PTJM1R_8iTC1klXn6eHNhTuTT6thKHv2h3w_croghkv37GL3XaGBW8AAekSZ5llx2RUKvbj_zU6WiyAZ0zjlsa_yGlenLZjGBQfLMfubHhx7ju49oheZ6euiyGaPfLqEtC98DD9kehJi3CWzNDiZbktMVdeGrfHmrTsmGngFuV9BZZtbcv9WnWR2pVsH12Mn4UyJP36TLYHt0pIggJVyWk6-0W"; class="text-blue-500">
+                        <i class="fa-brands fa-facebook">Log in with Facebook</i>
+                    </a>
+                </div>
+                <div class="p-4 text-center">
+                    <a href="https://www.instagram.com/accounts/password/reset/" class="text-blue-500">Forgot Password?</a>
+                </div>
+                <div class="p-4 text-center border-solid border-2 border-gray-400 rounded-md">
+                    <p>
+                        Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup" class="text-blue-500">Sign up</a>
+                    </p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

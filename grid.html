@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        gap: 5px;
+        height: 100vh;
+        display: grid;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        grid-template-areas:
+            "header header header header"
+            "hero hero main main"
+            "hero hero main main"
+            "sidebar sidebar main main"
+            "sidebar sidebar extra extra"
+            "related related related head"
+            "footer footer footer footer";
+    }
+    .one{
+        grid-area: header;
+        background-color: lightblue;
+    }
+    .two{
+        grid-area: hero;
+        background-color: rgb(125, 125, 125);
+    }
+    .three{
+        grid-area: main;
+        background-color: lightgreen;
+    }
+    .four{
+        grid-area: sidebar;
+        background-color: lightcoral;
+    }
+    .five{
+        grid-area: extra;
+        background-color: rgb(49, 49, 49);
+    }
+    .six{
+        grid-area: related;
+        background-color: rgb(0, 134, 5);
+    }
+    .seven{
+        grid-area: head;
+        background-color: rgb(255, 157, 255);
+    }
+    .eight{
+        grid-area: footer;
+        background-color: rgb(255, 150, 31);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="one">
+            Header
+        </div>
+        <div class="two">
+            Hero
+        </div>
+        <div class="three">
+            Main Content
+        </div>
+        <div class="four">
+            Sidebar
+        </div>
+        <div class="five">
+            Extra Content
+        </div>
+        <div class="six">
+            Releated Images
+        </div>
+        <div class="seven">
+            Head
+        </div>
+        <div class="eight">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

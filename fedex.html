@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedEx</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--NAVBAR-->
+
+    <div class="navbar bg-purple-600 p-5 flex justify-between items-center text-white text-xl">
+        <div class="logo text-5xl">
+            <i class="fa-brands fa-fedex"></i>
+        </div>
+        <div class="links">
+            <select>
+                <option>Shipping</option>
+            </select>
+            <select>
+                <option>Tracking</option>
+            </select>
+            <select>
+                <option>Design & Print</option>
+            </select>
+            <select>
+                <option>Locations</option>
+            </select>
+            <select>
+                <option>Support</option>
+            </select>
+        </div>
+        <div class="login">
+            <button class="text-white rounded-lg">Sign Up / Log In 
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-magnifying-glass p-3"></i>
+            </button>
+        </div>
+    </div>
+
+    <!--NAVBAR-->
+
+    <!--HERO-->
+    <div>
+        <div class="hero bg-[url(https://cdn.bfldr.com/I22OPSFM/at/sqvwp5wqszhw4743ssqkkc3q/2019_Marrakech_35941.jpg?auto=webp&fit=bounds&format=jpg&crop=1200%3A450%2Csmart&width=1200&height=450)]
+        bg-fixed bg-screen h-screen bg-repeat bg-cover bg-center ">
+            <div class="hero-content text-white text-center p-20 text-7xl">
+                <p>Ship, manage, track, deliver </p>
+            </div>
+        <div class="items text-center text-6xl mt-15 flex justify-center items-center">
+            <div>
+                <i class="fa-solid fa-truck p-7 bg-white w-50 z-0">
+                    <p>
+                        <span class="text-[20px]">RATE & SHIP</span>
+                    </p>
+                </i>
+            </div>
+            <div>
+                <i class="fa-solid fa-box p-13 bg-purple-600 w-50 z-1 text-black">
+                    <p>
+                        <span class="text-[20px]">TRACK</span>
+                    </p>
+                </i>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot p-7 bg-white w-50 z-0">
+                    <p>
+                        <span class="text-[20px]">SHIP</span>
+                    </p>
+                </i>
+            </div>
+        </div>
+            
+            <!--TRACK ID-->
+            <div class="track flex justify-center items-center mt-15">
+                <input type="text " placeholder="Enter Tracking ID" class="p-5 bg-white w-150" required>
+                <button class="bg-orange-600 text-white p-5" onclick="handleTrack()">Track</button>
+            </div>
+            <p class="text-center text-white font-bold">
+                <span>
+                    <a href="#">
+                        MULTIPLE TRACKING NUMBERS
+                    </a>
+                    <span class="text-white">|</span>
+                    <a href="#">
+                        TRACK BY REFERENCE
+                    </a>
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    function handleTrack(){
+        alert("Tracking ID is: " + document.querySelector('.track input').value);
+    }
+</script>
+</html>

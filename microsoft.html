@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--
+    NavBar
+    -->
+    <!--All Types of md,etc
+    md: It will be applied to medium screens and above
+    lg: It will be applied to large screens and above
+    xl: It will be applied to extra large screens and above
+    -->
+    <nav class="container mx-auto py-4 px-4">
+        <div class="flex">
+            <div class="flex justify-between items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" class="h-6">
+                <h1 class="text-xl font-bold ml-4">| Windows</h1>
+                <select name="version" id="version" class="ml-4">
+                    <option value="10">About Windows</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Get Windows</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Shop PC's</option>
+                </select>
+                <select name="version" id="version" >
+                    <option value="10">Get Help</option>
+                </select>
+            </div>
+            <div class="flex justify-between items-center ml-auto">
+                <select name="version" id="version" >
+                    <option value="10">All Microsoft</option>
+                </select>
+                <div class="flex items-center ml-4">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+    Main Content
+    -->
+
+    <div class="bg-linear-to-b from-cyan-100 to-white-500">
+        <div>
+            <p class="text-6xl text-black text-center py-20 px-4 font-medium">
+                Welcome To Windows
+            </p>
+            <p class="text-xl text-black text-center px-4">
+                We know you've got a lot to do. Every day delivers a new challenge.
+                <br>Well, those challenges are about to get easier with Windows 11.
+            </p>
+            <div class="flex justify-center items-center py-4">
+                <button class="bg-indigo-950 text-white px-4 py-2 rounded-lg">Get Windows 11</button>
+                <a href="#" class="text-blue-500 ml-4">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    Image
+    -->
+
+</body>
+</html>
