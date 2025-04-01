@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+        <h1 class="text-2xl font-bold text-center text-indigo-600 mb-6">Prime Number Finder</h1>
+        
+        <div class="space-y-4">
+            <div class="flex flex-col">
+                <label for="start_number" class="text-sm font-medium text-gray-700 mb-1">Start Number</label>
+                <input name="start_number" id="start_number" type="number" placeholder="Enter starting number" 
+                    class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            
+            <div class="flex flex-col">
+                <label for="end_number" class="text-sm font-medium text-gray-700 mb-1">End Number</label>
+                <input name="end_number" id="end_number" type="number" placeholder="Enter ending number" 
+                    class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            
+            <button onclick="checkPrime()" 
+                class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Find Prime Numbers
+            </button>
+            
+            <div class="mt-6">
+                <h2 class="font-medium text-gray-700 mb-2">Results:</h2>
+                <div id="result" class="bg-gray-50 p-4 rounded-md border border-gray-200 min-h-[100px] break-words"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPrime(){
+            let start_number = parseInt(document.getElementById('start_number').value);
+            let end_number = parseInt(document.getElementById('end_number').value);
+            
+            if (isNaN(start_number) || isNaN(end_number)) {
+                document.getElementById('result').innerHTML = '<p class="text-red-500">Please enter valid numbers</p>';
+                return;
+            }
+            
+            if (start_number > end_number) {
+                document.getElementById('result').innerHTML = '<p class="text-red-500">Start number must be less than or equal to end number</p>';
+                return;
+            }
+            
+            let result = '<p class="font-medium mb-2">Prime numbers between ' + start_number + ' and ' + end_number + ':</p>';
+            let primeCount = 0;
+            
+            for(let i = Math.max(2, start_number); i <= end_number; i++){
+                let isPrime = true;
+                for(let j = 2; j <= Math.sqrt(i); j++){
+                    if(i % j == 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    result += '<span class="inline-block bg-indigo-100 text-indigo-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">' + i + '</span>';
+                    primeCount++;
+                }
+            }
+            
+            if (primeCount === 0) {
+                result += '<p class="text-gray-500">No prime numbers found in this range</p>';
+            }
+            
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

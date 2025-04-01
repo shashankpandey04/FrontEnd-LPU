@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-4">
+        <div class="flex justify-center items-center p-10 border border-gray-300 rounded-xl">
+            <div class="flex justify-center items-center">
+                <h1 class="text-xl" id="h1">
+                    This is Heading 1
+                </h1>
+            </div>
+        </div>
+        <div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" id="div_1_button_1">
+                <i class="fas fa-edit"></i>
+                EDIT TEXT
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" id="div_1_button_2">
+                <i class="fas fa-paint-brush"></i>
+                CHANGE COLOUR
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <div class="flex justify-center items-center p-10 border border-gray-300 rounded-xl" id="div2">
+
+        </div>
+        <div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" id="div_2_button_1">
+                <i class="fas fa-plus"></i>
+                ADD HEADING
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" id="div_2_button_2">
+                <i class="fas fa-minus"></i>
+                REMOVE LAST HEADING
+            </button>
+        </div>
+    </div>
+    <script>
+        let h1 = document.getElementById('h1');
+        let div2 = document.getElementById('div2');
+
+        let div_1_button_1 = document.getElementById('div_1_button_1');
+        let div_1_button_2 = document.getElementById('div_1_button_2');
+
+        let div_2_button_1 = document.getElementById('div_2_button_1');
+        let div_2_button_2 = document.getElementById('div_2_button_2');
+
+        let obj = {
+            h1: {
+                text: 'This is Heading 1',
+                color: 'black'
+            },
+            div2: {
+                headings: []
+            }
+        };
+
+        div_1_button_1.addEventListener('click', () => {
+            obj.h1.text = prompt('Enter new text for h1');
+            h1.innerText = obj.h1.text;
+        });
+
+        div_1_button_2.addEventListener('click', () => {
+            obj.h1.color = prompt('Enter new color for h1');
+            h1.style.color = obj.h1.color;
+        });
+
+        div_2_button_1.addEventListener('click', () => {
+            let heading = prompt('Enter new heading');
+            obj.div2.headings.push(heading);
+            div2.innerHTML = '';
+            obj.div2.headings.forEach(heading => {
+                div2.innerHTML += `<h1>${heading}</h1>`;
+            });
+        });
+
+
+        div_2_button_2.addEventListener('click', () => {
+            obj.div2.headings.pop();
+            div2.innerHTML = '';
+            obj.div2.headings.forEach(heading => {
+                div2.innerHTML += `<h1>${heading}</h1>`;
+            });
+        });
+        
+    </script>
+</body>
+</html>

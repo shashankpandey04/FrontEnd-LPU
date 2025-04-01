@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even OR ODD</title>
+</head>
+<body>
+    <input name="number" id="number" type="number" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkNumber(){
+            let number = document.getElementById('number').value;
+            if(number % 2 == 0){
+                document.getElementById('result').innerHTML = 'Even';
+            }else{
+                document.getElementById('result').innerHTML = 'Odd';
+            }
+        }
+    </script>
+</body>
+</html>

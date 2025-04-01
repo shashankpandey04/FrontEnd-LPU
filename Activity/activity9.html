@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5f40d186a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-2">
+        <div class="flex justify-evenly items-center p-3 bg-slate-400 gap-4">
+            <a>
+                Home
+            </a>
+            <a>
+                Contact Us
+            </a>
+            <a>
+                About Us
+            </a>
+            <a id="FormLink">
+                Form
+            </a>
+        </div>
+        <div class="p-4 bg-green-500 flex justify-center items-center font-bold text-white text-2xl gap-4 mt-5" id="formDiv">
+            <div class="bg-red-500 p-2 rounded-lg">
+                <div>
+                    <input class="border-2 border-gray-300 rounded-lg p-2" type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <button id="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 bg-pink-100 flex justify-center items-center text-2xl mt-7">
+            <div class="p-8">
+                <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="Some Random Image" height="500" width="500" class="rounded-lg shadow-lg shadow-gray-500">
+            </div>
+            <div class="w-1/2">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore tenetur quaerat deleniti accusamus, maiores maxime, rerum quae dolores quas illum at possimus, dolor mollitia cupiditate et nobis cumque molestiae temporibus!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores rerum labore dignissimos recusandae incidunt quas, provident repudiandae magnam autem soluta possimus doloremque nihil architecto tenetur maxime excepturi necessitatibus vel?
+                </p>
+            </div>
+        </div>
+        <footer class="flex">
+            <div class="flex justify-center items-center p-3 bg-slate-400 gap-4 w-full p-10">
+                <p class="text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ad veniam tempora deleniti minus alias recusandae exercitationem cum repudiandae expedita? Beatae odit officia ex aut laudantium eveniet veritatis id earum.
+                </p>
+                <p class="text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ad veniam tempora deleniti minus alias recusandae exercitationem cum repudiandae expedita? Beatae odit officia ex aut laudantium eveniet veritatis id earum.
+                </p>
+                <p class="text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ad veniam tempora deleniti minus alias recusandae exercitationem cum repudiandae expedita? Beatae odit officia ex aut laudantium eveniet veritatis id earum.
+                </p>
+                <p class="text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ad veniam tempora deleniti minus alias recusandae exercitationem cum repudiandae expedita? Beatae odit officia ex aut laudantium eveniet veritatis id earum.
+                </p>                
+            </div>
+        </footer>
+    </div>
+    <script>
+        let submitButton = document.getElementById("submit");
+        let formDiv = document.getElementById("formDiv");
+        submitButton.addEventListener("click", function() {
+            let nameInput = document.querySelector("input[type='text']");
+            let nameValue = nameInput.value;
+            if (nameValue) {
+                formDiv.style.display = "none";
+            } else {
+                alert("Please enter your name.");
+            }
+        });
+        let formLink = document.getElementById("FormLink");
+        formLink.addEventListener("click", function() {
+            if (formDiv.style.display === "none") {
+                formDiv.style.display = "block";
+            } else {
+                formDiv.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
